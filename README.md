@@ -8,7 +8,7 @@ A simple API using NodeJs and TypeScript where you can manager all the users in 
 
 ### Docker
 
-I used Docker to run the application, so you need to run on terminal "<strong>docker-composer up -d</strong>" inside the root directory where is the docker-compose.yml file. But first of all, check the ports of the application, I used the <strong>3000</strong> to the API Container and <strong>9603</strong> to the Database Container, you need this two ports open on your PC.
+I used Docker to run the application, so you need to run on terminal "<strong>docker-composer up -d</strong>" inside the root directory where is the docker-compose.yml file. But first of all, check the ports of the application, I used the <strong>3000</strong> to the API Container and <strong>9603</strong> to the Database Container, you need this two ports free on your PC.
 
 ### JWT
 
