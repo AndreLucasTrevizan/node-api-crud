@@ -1,0 +1,29 @@
+version: '3.7'
+
+services:
+  api:
+    build: './api'
+    container_name: 'crudapi_container'
+    volumes:
+      - './:/home/Documents/node-api-crud'
+    command: npm run start
+    ports:
+      - '3000:3000'
+    networks:
+      - backend
+  apidb:
+    image: mysql
+    container_name: 'cruddb_container'
+    volumes:
+      - './database/:/var/lib/mysql'
+    environment:
+      MYSQL_DATABASE: 'nodecrud'
+      MYSQL_ROOT_PASSWORD: 'minhasenha'
+    ports:
+      - '9603:3306'
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: 'bridge'
