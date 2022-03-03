@@ -11,9 +11,9 @@ app.use(express.json());
 
 const port = config.get<string>('PORT');
 
-app.get('/', (req: Request, res: Response) => {
-    res.status(200).json({msg: 'Ok, api running'});
-});
+import router from './routes/router';
+
+app.use('/api', router);
 
 app.listen(port, () => {
     db.connect((err: any) => {
