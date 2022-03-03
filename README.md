@@ -4,7 +4,7 @@ Crud with NodeJs using Typescript and Json Web Tokens (JWT) to grant access to t
 
 ## About the API
 
-A simple API using NodeJs and TypeScript where you can manager all the users in the system, it's a similar to an Admin Panel.
+A simple API using NodeJs and TypeScript where you can manager all the users in the system, it's similar to an Admin Panel.
 
 ### Docker
 
