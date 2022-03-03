@@ -12,4 +12,4 @@ I used Docker to run the application, so you need to run on terminal "<strong>do
 
 ### JWT
 
-The API is protected with JsonWebTokens in some endpoints like <strong>GET /api/users</strong> where you can see all the users from the Database, then, you need to be an Admin User to access this.
+The API is protected with JsonWebTokens in some endpoints like <strong>GET /api/users</strong> where you can see all the users from the Database, that way, you need to be an Admin User to access this.
