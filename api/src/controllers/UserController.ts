@@ -31,11 +31,8 @@ export default class {
             db.query(`INSERT INTO users (name, lastname, email, password, role) VALUES (?, ?, ?, ?, ?)`, [
                 name, lastname, email, hash, (role === undefined || role === '') ? 0 : role
             ], (err, result) => {
-                if(err) {
-                    if(err.errno == 1062) res.status(403).json({msg: 'Email already in use'});
-                }
-                
-                res.status(201).json({msg: 'User Registered'});
+                if(err) res.status(403).json({msg: 'Email already in use'});
+                else res.status(201).json({msg: 'User Registered'});
             });
         } catch (error: any) {
             res.status(500).json({msg: 'Error: ' + error.message});

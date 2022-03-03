@@ -9,8 +9,7 @@ export default (req: Request, res: Response, next: NextFunction) => {
         let token = BearerToken[1];
         jwt.verify(token, config.get<string>('SECRET'), (err: any, decoded: any) => {
             if(err) res.status(406).json({msg: 'Inválid Token!'});
-
-            if(decoded.role === 1) {
+            else if(decoded.user[0].role === 1) {
                 next();
             } else res.status(406).json({msg: `You don't have permission to access`});
         });

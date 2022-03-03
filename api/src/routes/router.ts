@@ -8,7 +8,7 @@ const userController = new UserController();
 router.post('/users', userController.createUser);
 router.get('/users', isAdminMiddleware, userController.listAllUsers);
 router.put('/users', userController.updateUser);
-router.delete('/users/:id', userController.deleteUser);
+router.delete('/users/:id', isAdminMiddleware, userController.deleteUser);
 router.post('/sign_in', userController.sign_in);
 
 export default router;
